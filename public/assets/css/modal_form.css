@@ -1,0 +1,91 @@
+@font-face{
+    font-family: "NewYork";
+    src: url("../fonts/Newyork/NewYork.otf");
+}
+
+@font-face{
+    font-family: "Montserrat-Light";
+    src: url("../fonts/Montserrat/Montserrat-Light.ttf");
+}
+
+.tittle_newyork_form{
+    font-family: "NewYork";
+    color: var( --e-global-color-127a5e8 );
+    font-weight: 100;
+    letter-spacing:2px;
+    text-shadow: 2px 1px 2px rgb(0 0 0 / 13%);
+    font-size: 18px;
+}
+
+.tittle_form {
+    font-family: "Montserrat-Light";
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: #2F2F34;
+    text-shadow: 1.3px 1.3px 1.3px rgb(0 0 0 / 13%);
+}
+
+.label_form {
+    font-family: "Montserrat-Light";
+    letter-spacing: 1px;
+    font-size: 12px;
+    color: #2F2F34;
+    text-shadow: 1.3px 1.3px 1.3px rgb(0 0 0 / 13%);
+}
+
+.form-control{
+    border-radius: 0!important;
+    border: 1px solid transparent!important;
+}
+
+.btn-form{
+    background-color: transparent!important;
+    border: 1px solid transparent!important;
+    font-family: "Montserrat-Light";
+    letter-spacing: 5px;
+    font-size: 13px;
+    color: #2F2F34;
+    text-shadow: 1.3px 1.3px 1.3px rgb(0 0 0 / 15%);
+}
+
+/*-----dark*/
+
+.tittle_newyork_form_dark{
+    font-family: "NewYork";
+    color: #E4E4E4;
+    font-weight: 100;
+    letter-spacing:2px;
+    text-shadow: 2px 1px 2px rgb(0 0 0 / 13%);
+    font-size: 18px;
+}
+
+.tittle_form_dark {
+    font-family: "Montserrat-Light";
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: #E4E4E4;
+    text-shadow: 1.3px 1.3px 1.3px rgb(0 0 0 / 13%);
+}
+
+.label_form_dark {
+    font-family: "Montserrat-Light";
+    letter-spacing: 1px;
+    font-size: 12px;
+    color: #E4E4E4;
+    text-shadow: 1.3px 1.3px 1.3px rgb(0 0 0 / 13%);
+}
+
+.form-control_dark{
+    border-radius: 0!important;
+    border: 1px solid transparent!important;
+}
+
+.btn-form_dark{
+    background-color: transparent!important;
+    border: 1px solid transparent!important;
+    font-family: "Montserrat-Light";
+    letter-spacing: 5px;
+    font-size: 13px;
+    color: #E4E4E4;
+    text-shadow: 1.3px 1.3px 1.3px rgb(0 0 0 / 15%);
+}

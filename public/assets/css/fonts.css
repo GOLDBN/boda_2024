@@ -1,0 +1,374 @@
+@font-face {
+    font-family: "Montserrat-Black";
+    src: url("../fonts/Montserrat/Montserrat-Black.ttf");
+}
+
+@font-face{
+    font-family: "Montserrat-BlackItalic";
+    src: url("../fonts/Montserrat/Montserrat-BlackItalic.ttf");
+}
+
+@font-face{
+    font-family: "Montserrat-Bold";
+    src: url("../fonts/Montserrat/Montserrat-Bold.ttf");
+}
+
+@font-face{
+    font-family: "Montserrat-BoldItalic";
+    src: url("../fonts/Montserrat/Montserrat-BoldItalic.ttf");
+}
+
+@font-face{
+    font-family: "Montserrat-ExtraBold";
+    src: url("../fonts/Montserrat/Montserrat-ExtraBold.ttf");
+}
+
+@font-face{
+    font-family: "Montserrat-ExtraBoldItalic";
+    src: url("../fonts/Montserrat/Montserrat-ExtraBoldItalic.ttf");
+}
+
+@font-face{
+    font-family: "Montserrat-ExtraLight";
+    src: url("../fonts/Montserrat/Montserrat-ExtraLight.ttf");
+}
+
+@font-face{
+    font-family: "Montserrat-ExtraLightItalic";
+    src: url("../fonts/Montserrat/Montserrat-ExtraLightItalic.ttf");
+}
+
+@font-face{
+    font-family: "Montserrat-Italic";
+    src: url("../fonts/Montserrat/Montserrat-Italic.ttf");
+}
+
+@font-face{
+    font-family: "Montserrat-Light";
+    src: url("../fonts/Montserrat/Montserrat-Light.ttf");
+}
+
+@font-face{
+    font-family: "Montserrat-LightItalic";
+    src: url("../fonts/Montserrat/Montserrat-LightItalic.ttf");
+}
+
+@font-face{
+    font-family: "Montserrat-Medium";
+    src: url("../fonts/Montserrat/Montserrat-Medium.ttf");
+}
+
+@font-face{
+    font-family: "Montserrat-MediumItalic";
+    src: url("../fonts/Montserrat/Montserrat-MediumItalic.ttf");
+}
+
+@font-face{
+    font-family: "Montserrat-Regular";
+    src: url("../fonts/Montserrat/Montserrat-Regular.ttf");
+}
+
+@font-face{
+    font-family: "Montserrat-SemiBold";
+    src: url("../fonts/Montserrat/Montserrat-SemiBold.ttf");
+}
+
+@font-face{
+    font-family: "Montserrat-SemiBoldItalic";
+    src: url("../fonts/Montserrat/Montserrat-SemiBoldItalic.ttf");
+}
+
+@font-face{
+    font-family: "Montserrat-Thin";
+    src: url("../fonts/Montserrat/Montserrat-Thin.ttf");
+}
+
+@font-face{
+    font-family: "Montserrat-ThinItalic";
+    src: url("../fonts/Montserrat/Montserrat-ThinItalic.ttf");
+}
+
+@font-face{
+    font-family: "NewYork";
+    src: url("../fonts/Newyork/NewYork.otf");
+}
+
+@font-face{
+    font-family: "Heebo-Light";
+    src: url("../fonts/Heebo/Heebo-Light.ttf");
+}
+
+
+.montserrat-black{
+    font-family: "Montserrat-Black";
+}
+.montserrat-blackitalic{
+    font-family: "Montserrat-BlackItalic";
+}
+.Montserrat-Bold{
+    font-family: "Montserrat-Bold";
+}
+.montserrat-black{
+    font-family: "Montserrat-Black";
+}
+.Montserrat-ExtraBold{
+    font-family: "Montserrat-ExtraBold";
+}
+
+.Montserrat-BoldItalic{
+    font-family: "Montserrat-BoldItalic";
+}
+
+.Montserrat-ExtraBoldItalic{
+    font-family: "Montserrat-ExtraBoldItalic";
+}
+
+.Montserrat-ExtraLight{
+    font-family: "Montserrat-ExtraLight";
+}
+
+.Montserrat-ExtraLightItalic{
+    font-family: "Montserrat-ExtraLightItalic";
+}
+.Montserrat-Italic{
+    font-family: "Montserrat-Italic";
+}
+
+.Montserrat-Light{
+    font-family: "Montserrat-Light";
+}
+
+.Montserrat-LightItalic{
+    font-family: "Montserrat-LightItalic";
+}
+
+.Montserrat-Medium{
+    font-family: "Montserrat-Medium";
+}
+
+.Montserrat-MediumItalic{
+    font-family: "Montserrat-MediumItalic";
+}
+
+.Montserrat-Regular{
+    font-family: "Montserrat-Regular";
+}
+
+.Montserrat-SemiBold{
+    font-family: "Montserrat-SemiBold";
+}
+
+.Montserrat-SemiBoldItalic{
+    font-family: "Montserrat-SemiBoldItalic";
+}
+
+.Montserrat-Thin{
+    font-family: "Montserrat-Thin";
+}
+
+.Montserrat-ThinItalic{
+    font-family: "Montserrat-ThinItalic";
+}
+
+.NewYork{
+    font-family: "NewYork";
+}
+
+.heebo-light{
+    font-family: "Heebo-Light";
+    text-shadow: 1.3px 1.3px 1.3px rgb(0 0 0 / 10%);
+    letter-spacing: 2px;
+}
+
+.tittle_menu{
+    font-family: "Montserrat-Light";
+    letter-spacing: 5px;
+    font-size: 11px;
+    color: #2F2F34;
+    text-shadow: 1.3px 1.3px 1.3px rgb(0 0 0 / 15%);
+}
+
+.tittle_footer{
+    font-family: "Montserrat-SemiBold";
+    font-size: 15px;
+    letter-spacing: 3px;
+    color: #63686E;
+    text-decoration: none;
+}
+
+.tittle_footer:hover{
+    font-family: "Montserrat-SemiBold";
+    font-size: 15px;
+    letter-spacing: 3px;
+    color: #63686E;
+    text-decoration: none;
+}
+
+.tittle_footer-dark{
+    font-family: "Montserrat-SemiBold";
+    font-size: 15px;
+    letter-spacing: 3px;
+    color: #ffff;
+    text-decoration: none;
+}
+
+.tittle_footer-dark:hover{
+    font-family: "Montserrat-SemiBold";
+    font-size: 15px;
+    letter-spacing: 3px;
+    color: #ffff;
+    text-decoration: none;
+}
+
+.tittle_menu:hover{
+    font-weight: bold;
+    color: #000000;
+
+}
+
+.tittle_menu2{
+    font-family: "Montserrat-Light";
+    letter-spacing: 5px;
+    font-size: 10px;
+    text-shadow: 1.3px 1.3px 1.3px rgb(0 0 0 / 13%);
+    color: #000;
+}
+
+.tittle_menu2:hover{
+    font-family: "Montserrat-Light";
+    font-weight: bold;
+    color: #000000;
+}
+
+.text-paraf{
+   font-family: "Montserrat-Light";
+    letter-spacing: 3px;
+    font-size: 12px;
+    text-shadow: 1.3px 1.3px 1.3px rgb(0 0 0 / 5%);
+    color: #000000;
+}
+
+.text-play{
+   font-family: "Montserrat-Light";
+    letter-spacing: 3px;
+    font-size: 9px;
+    text-shadow: 1.3px 1.3px 1.3px rgb(0 0 0 / 5%);
+    color: #000000;
+    text-decoration: none;
+}
+
+.pause:hover {
+    color: rgb(0, 0, 0);
+   font-weight: bold;
+}
+
+.mute:hover {
+    color: rgb(0, 0, 0);
+   font-weight: bold;
+}
+
+.text-play:hover{
+    color: rgb(0, 0, 0);
+}
+
+.text-play:active{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+        display:inline-block;
+        border-bottom:0.1px solid #A7ABAE;
+        padding-bottom:2px;
+}
+
+.tittle_newyork{
+    font-family: "NewYork";
+    color: var( --e-global-color-127a5e8 );
+    font-weight: 100;
+    letter-spacing: 7px;
+    text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.116);
+     font-size: 26px;
+}
+
+.tittle_newyork_life{
+    font-family: "NewYork";
+    color: var( --e-global-color-127a5e8 );
+    font-weight: 100;
+    letter-spacing: 7px;
+    text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.116);
+     font-size: 35px;
+}
+
+.tittle_thin_life{
+    font-family: "Montserrat-Thin";
+    color: var( --e-global-color-127a5e8 );
+    font-weight: 600;
+    letter-spacing: 7px;
+    text-shadow: 2px 1px 2px rgb(0, 0, 0, 0.116);
+    font-size: 30px;
+}
+
+
+.tittle_thin{
+    font-family: "NewYork";
+    color: var( --e-global-color-127a5e8 );
+    letter-spacing: 7px;
+    text-shadow: 2px 1px 2px rgb(0 0 0 / 18%);
+    font-size: 30px;
+}
+
+.arrowfont{
+    color: #ffffff;
+    font-size: 10px;
+}
+
+.slect_custom{
+    border: 1px solid #E4E4E4!important;
+    background-color: transparent;
+}
+
+
+/* Modo Dark */
+
+.tittle_menu_dark{
+    font-family: "Montserrat-Light";
+    letter-spacing: 5px;
+    font-size: 11px;
+    color: #E4E4E4;
+    text-shadow: 1.3px 1.3px 1.3px rgb(0 0 0 / 15%);
+}
+
+.tittle_menu_dark:hover{
+    font-weight: bold;
+    color: #E4E4E4;
+
+}
+
+.tittle_menu2_dark{
+    font-family: "Montserrat-Light";
+    letter-spacing: 5px;
+    font-size: 10px;
+    color: #E4E4E4;
+    text-shadow: 1.3px 1.3px 1.3px rgb(0 0 0 / 13%);
+}
+
+.tittle_menu2_dark:hover{
+    font-family: "Montserrat-Light";
+    font-weight: bold;
+    color: #E4E4E4;
+}
+
+.tittle_newyork_dark{
+    font-family: "NewYork";
+    font-weight: 100;
+    color: #E4E4E4;
+    letter-spacing: 7px;
+    text-shadow: 2px 1px 2px rgb(0 0 0 / 18%);
+     font-size: 25px;
+}
+
+.tittle_thin_dark{
+    font-family: "NewYork";
+    color: #E4E4E4;
+    letter-spacing: 7px;
+    text-shadow: 2px 1px 2px rgb(0 0 0 / 18%);
+    font-size: 30px;
+}
