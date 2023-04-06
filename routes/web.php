@@ -24,6 +24,10 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
+Route::get('/demo', function () {
+    return view('Wedding.index');
+});
+
 Auth::routes();
 
 Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
