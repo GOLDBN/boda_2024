@@ -30,7 +30,10 @@
 	<!-- Modernizr JS -->
     <script src="{{ asset('wedding/js/modernizr-2.6.2.min.js')}}"></script>
 	<!-- FOR IE9 below -->
-
+    <audio autoplay loop controls preload="auto" volume="0.5">
+        <source src="{{ asset('wedding/stand.mp3')}}" type="audio/mpeg">
+        <source src="{{ asset('wedding/stand.wav')}}" type="audio/wav">
+    </audio>
 	</head>
 	<body >
 
