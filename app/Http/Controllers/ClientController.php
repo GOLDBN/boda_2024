@@ -124,9 +124,9 @@ class ClientController extends Controller
      * @param  Client $client
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Client $client, $id)
+    public function update(Request $request, Client $client)
     {
-        $client = Client::find($id);
+        $client = Client::where('id', $client->id)->firstOrFail();
         $client->nombre = $request->get('nombre');
         $client->num_invitados_perm = $request->get('num_invitados_perm');
         $client->num_invitados_perm_n = $request->get('num_invitados_perm_n');
