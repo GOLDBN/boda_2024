@@ -38,6 +38,8 @@ class Client extends Model
         'telefono',
         'num_invitados_perm_n',
         'num_invitados_confirm_n',
+        'qr',
+        'code',
     ];
 
 }

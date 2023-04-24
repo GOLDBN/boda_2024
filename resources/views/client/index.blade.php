@@ -66,8 +66,8 @@
 											<td>{{ $client->telefono }}</td>
 
                                             <td>
-                                                <form action="{{ route('clients.destroy',$client->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary" href="{{ route('single.inv', $client->id) }}" target="_blanck"><i class="fas fa-signature"></i> </a>
+                                                <form action="{{ route('clients.destroy',$client->code) }}" method="POST">
+                                                    <a class="btn btn-sm btn-primary" href="{{ route('single.inv', $client->code) }}" target="_blanck"><i class="fas fa-signature"></i> </a>
                                                     <a class="btn btn-sm btn-primary " href="{{ route('clients.show',$client->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>
                                                     <a class="btn btn-sm btn-success" href="{{ route('clients.edit',$client->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                                                     @csrf
