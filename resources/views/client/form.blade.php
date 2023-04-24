@@ -25,7 +25,7 @@
 
         <div class="col-xs-12 col-sm-12 col-md-6 mt-3">
             {{ Form::label('QR') }}
-            {{ Form::file('qr', $client->qr, ['class' => 'form-control' . ($errors->has('qr') ? ' is-invalid' : ''), 'placeholder' => 'Niños']) }}
+            {{ Form::file('qr', ['class' => 'form-control' . ($errors->has('qr') ? ' is-invalid' : '')]) }}
             {!! $errors->first('qr', '<div class="invalid-feedback">:message</div>') !!}
         </div>
 

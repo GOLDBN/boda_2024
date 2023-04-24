@@ -124,11 +124,21 @@ class ClientController extends Controller
      * @param  Client $client
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Client $client)
+    public function update(Request $request, Client $client, $id)
     {
-        request()->validate(Client::$rules);
-
-        $client->update($request->all());
+        $client = Client::find($id);
+        $client->nombre = $request->get('nombre');
+        $client->num_invitados_perm = $request->get('num_invitados_perm');
+        $client->num_invitados_perm_n = $request->get('num_invitados_perm_n');
+        $client->telefono = $request->get('telefono');
+        if ($request->hasFile("qr")) {
+            $file = $request->file('qr');
+            $path = public_path() . '/qr';
+            $fileName = uniqid() . $file->getClientOriginalName();
+            $file->move($path, $fileName);
+            $client->qr = $fileName;
+        }
+        $client->update();
 
         Session::flash('edit', 'Se ha editado sus datos con exito');
         return redirect()->route('clients.index')
