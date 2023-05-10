@@ -112,6 +112,7 @@
 	<div id="fh5co-event" class="fh5co-bg" style="background-image:url('{{ asset('wedding/images/6.jpg')}}');">
 		<div class="overlay"></div>
 		<div class="container">
+
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 					<h2>Detalles del evento</h2>
@@ -135,21 +136,25 @@
                                         <li style="color:#fff;text-decoration:none">7:00 pm a 4:00 am fiesta.</li>
                                     </ul>
 								</div>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <a href="https://goo.gl/maps/Zs33vhPRxK6tp9KF6" target="_blank" style="color:#fff">
-                                            <strong>  Blvrd Barra Vieja, 39930 Acapulco de Juárez, Gro.</strong>
-                                          </a>
-                                    </div>
-                                </div>
-
-
 							</div>
 						</div>
 
 					</div>
 				</div>
 			</div>
+
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+					<h2>Direeccion</h2>
+                    <a href="https://goo.gl/maps/Zs33vhPRxK6tp9KF6" target="_blank" >
+                        <strong style="color:#fff">  Blvrd Barra Vieja, 39930 Acapulco de Juárez, Gro.</strong>
+                    </a>
+				</div>
+                <div class="col-12">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30573.268996016017!2d-99.66595058068847!3d16.693957758196074!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ca4272a740fa87%3A0xc234e25b703a9c5a!2sCasa%20Tasgar!5e0!3m2!1ses-419!2smx!4v1683734205267!5m2!1ses-419!2smx" width="1200" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+			</div>
+
 		</div>
 	</div>
 
@@ -186,6 +191,24 @@
 	<!-- Main -->
     <script src="{{ asset('wedding/js/main.js')}}"></script>
 
+    <script>
+        var d = new Date(new Date().getTime() + 419 * 120 * 120 * 2000);
+
+        // default example
+        simplyCountdown('.simply-countdown-one', {
+            year: d.getFullYear(),
+            month: d.getMonth() + 1,
+            day: d.getDate()
+        });
+
+        //jQuery example
+        $('#simply-countdown-losange').simplyCountdown({
+            year: d.getFullYear(),
+            month: d.getMonth() + 1,
+            day: d.getDate(),
+            enableUtc: false
+        });
+    </script>
 
 	</body>
 </html>
