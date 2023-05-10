@@ -151,7 +151,7 @@
                     </a>
 				</div>
                 <div class="col-12">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30573.268996016017!2d-99.66595058068847!3d16.693957758196074!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ca4272a740fa87%3A0xc234e25b703a9c5a!2sCasa%20Tasgar!5e0!3m2!1ses-419!2smx!4v1683734205267!5m2!1ses-419!2smx" width="1200" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30573.268996016017!2d-99.66595058068847!3d16.693957758196074!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ca4272a740fa87%3A0xc234e25b703a9c5a!2sCasa%20Tasgar!5e0!3m2!1ses-419!2smx!4v1683734205267!5m2!1ses-419!2smx" height="400" style="border:0; width:366px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
 			</div>
 
