@@ -66,13 +66,12 @@
 											<td>{{ $client->telefono }}</td>
 
                                             <td>
-                                                <form action="{{ route('clients.destroy',$client->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary" href="{{ route('single.inv', $client->id) }}" target="_blanck"><i class="fas fa-signature"></i> </a>
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('clients.show',$client->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>
+                                                    <a class="btn btn-sm btn-primary" href="{{ route('single.inv', $client->code) }}" target="_blanck">Ver</a>
+                                                    <a type="button" class="btn btn-sm" target="_blank"
+                                                            href="https://wa.me/52{{$client->telefono}}?text=Hola%20{{$client->nombre}},%20te%20enviamos%20la%20invitaci%C3%B3n%20de%20nuestra%20boda,%20para%20esto%20es%20importante%20tu%20confirmaci%C3%B3n.%20Muchas%20gracias%20y%20esperamos%20puedan%20asistir.%20{{ urlencode(route('single.inv', $client->code)) }}"
+                                                            style="background: #00BB2D; color: #ffff">Enviar</a>
                                                     <a class="btn btn-sm btn-success" href="{{ route('clients.edit',$client->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Borrar</button>
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('clients.show',$client->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>
                                                 </form>
                                             </td>
                                         </tr>

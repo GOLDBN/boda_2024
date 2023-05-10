@@ -23,6 +23,12 @@
             {!! $errors->first('num_invitados_perm_n', '<div class="invalid-feedback">:message</div>') !!}
         </div>
 
+        <div class="col-xs-12 col-sm-12 col-md-6 mt-3">
+            {{ Form::label('QR') }}
+            {{ Form::file('qr', ['class' => 'form-control' . ($errors->has('qr') ? ' is-invalid' : '')]) }}
+            {!! $errors->first('qr', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
+
         <div class="col-xs-12 col-sm-12 col-md-12 text-center mt-5">
            <button type="submit" class="btn btn-primary">Guardar</button>
         </div>

@@ -9,7 +9,7 @@ use Mediconesystems\LivewireDatatables\NumberColumn;
 use Mediconesystems\LivewireDatatables\DateColumn;
 use Mediconesystems\LivewireDatatables\Http\Livewire\LivewireDatatable;
 use Session;
-
+use Illuminate\Support\Str;
 /**
  * Class ClientController
  * @package App\Http\Controllers
@@ -40,10 +40,25 @@ class ClientController extends Controller
         return view('client.create', compact('client'));
     }
 
-    public function single(Request $request, $id){
-        $client = Client::find($id);
+    public function single(Request $request, $code){
+        $client = Client::where('code', $code)->firstOrFail();
+        $maximo_personas = $client->num_invitados_perm;
+        $maximo_niños = $client->num_invitados_perm_n;
 
-        return view('client.single', compact('client'));
+        return view('Wedding.index', compact('client', 'maximo_personas', 'maximo_niños'));
+    }
+
+    public function update_single(Request $request, $code){
+
+        $user = Client::where('code', $code)->firstOrFail();
+        $user->nombre = $request->get('nombre');
+        $user->num_invitados_confirm = $request->get('num_invitados_confirm');
+        $user->num_invitados_confirm_n = $request->get('num_invitados_confirm_n');
+        $user->estatus = '1';
+        $user->update();
+
+        Session::flash('success', 'Se ha guardado sus datos con exito');
+        return redirect()->back()->with('success', 'usuario editado con exito.');
     }
 
     /**
@@ -54,12 +69,21 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
+        $code = Str::random(8);
         $client = new Client;
         $client->nombre = $request->get('nombre');
         $client->estatus = '0';
         $client->num_invitados_perm = $request->get('num_invitados_perm');
         $client->num_invitados_perm_n = $request->get('num_invitados_perm_n');
         $client->telefono = $request->get('telefono');
+        if ($request->hasFile("qr")) {
+            $file = $request->file('qr');
+            $path = public_path() . '/qr';
+            $fileName = uniqid() . $file->getClientOriginalName();
+            $file->move($path, $fileName);
+            $client->qr = $fileName;
+        }
+        $client->code = $code;
         $client->save();
 
         Session::flash('success', 'Se ha guardado sus datos con exito');
@@ -102,9 +126,19 @@ class ClientController extends Controller
      */
     public function update(Request $request, Client $client)
     {
-        request()->validate(Client::$rules);
-
-        $client->update($request->all());
+        $client = Client::where('id', $client->id)->firstOrFail();
+        $client->nombre = $request->get('nombre');
+        $client->num_invitados_perm = $request->get('num_invitados_perm');
+        $client->num_invitados_perm_n = $request->get('num_invitados_perm_n');
+        $client->telefono = $request->get('telefono');
+        if ($request->hasFile("qr")) {
+            $file = $request->file('qr');
+            $path = public_path() . '/qr';
+            $fileName = uniqid() . $file->getClientOriginalName();
+            $file->move($path, $fileName);
+            $client->qr = $fileName;
+        }
+        $client->update();
 
         Session::flash('edit', 'Se ha editado sus datos con exito');
         return redirect()->route('clients.index')

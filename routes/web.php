@@ -31,7 +31,8 @@ Route::get('/demo', function () {
 Auth::routes();
 
 Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
-Route::get('/single/{id}', [App\Http\Controllers\ClientController::class, 'single'])->name('single.inv');
+Route::get('/single/{code}', [App\Http\Controllers\ClientController::class, 'single'])->name('single.inv');
+Route::patch('/single/update/{code}', [App\Http\Controllers\ClientController::class, 'update_single'])->name('update.inv');
 
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);
