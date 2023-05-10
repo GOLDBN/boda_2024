@@ -44,9 +44,11 @@
 				<div class="col-md-8 col-md-offset-2 text-center">
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
-							<h1>Itzel &amp; Nacho</h1>
-                                Para nosotros lo más importante es tu presencia, pero si algo nos quieres obsequiar  con dinero lo sabremos apreciar
-                            </h2>
+							<h1 class="">Itzel &amp; Nacho</h1>
+                            <h2 class="text-white">
+                            Ya que vivimos juntos
+                            tenemos lo necesario, pero si algo nos quieres obsequiar con dinero lo sabremos apreciar.
+                             </h2>
 							<div class="simply-countdown simply-countdown-one"></div>
 						</div>
 					</div>
@@ -93,33 +95,38 @@
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 					<h2>Detalles del evento</h2>
+                    <h4 class="text-white" style="color:#fff">
+                        No hay código de vestimenta, sin embargo las mujeres no pueden asistir de Blanco.
+                    </h4>
 				</div>
 			</div>
+
 			<div class="row">
 				<div class="display-t">
 					<div class="display-tc">
 						<div class="col-12 col-md-offset-1">
-							<div class="col-md-12 col-sm-6 text-center">
+							<div class="col-12 text-center">
 								<div class="event-wrap animate-box">
 									<h3>Ceremonia y fiesta</h3>
-									<div class="event-col">
-										<i class="icon-clock"></i>
-										<span><br></span>
-										<span>6:00 PM</span>
-									</div>
-									<div class="event-col">
-										<i class="icon-calendar"></i>
-										<span>Viernes 7</span>
-										<span>Junio, 2024</span>
-									</div>
-									<a href="https://goo.gl/maps/Zs33vhPRxK6tp9KF6" target="_blank">
-                                      <strong>  Blvrd Barra Vieja, 39930 Acapulco de Juárez, Gro.</strong>
-                                    </a>
-
+                                    <ul class="text-white" style="font-size: 20px;list-style:none">
+                                        <li style="color:#fff;text-decoration:none">5:00 pm recepción en la playa.</li>
+                                        <li style="color:#fff;text-decoration:none">5:30 pm Inicio de la misa.</li>
+                                        <li style="color:#fff;text-decoration:none">6:30 pm recepción en el jardín.</li>
+                                        <li style="color:#fff;text-decoration:none">7:00 pm a 4:00 am fiesta.</li>
+                                    </ul>
 								</div>
-							</div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <a href="https://goo.gl/maps/Zs33vhPRxK6tp9KF6" target="_blank" style="color:#fff">
+                                            <strong>  Blvrd Barra Vieja, 39930 Acapulco de Juárez, Gro.</strong>
+                                          </a>
+                                    </div>
+                                </div>
 
+
+							</div>
 						</div>
+
 					</div>
 				</div>
 			</div>
@@ -158,24 +165,7 @@
     <script src="{{ asset('wedding/js/simplyCountdown.js')}}"></script>
 	<!-- Main -->
     <script src="{{ asset('wedding/js/main.js')}}"></script>
-	<script>
-    var d = new Date(new Date().getTime() + 419 * 120 * 120 * 2000);
 
-    // default example
-    simplyCountdown('.simply-countdown-one', {
-        year: d.getFullYear(),
-        month: d.getMonth() + 1,
-        day: d.getDate()
-    });
-
-    //jQuery example
-    $('#simply-countdown-losange').simplyCountdown({
-        year: d.getFullYear(),
-        month: d.getMonth() + 1,
-        day: d.getDate(),
-        enableUtc: false
-    });
-</script>
 
 	</body>
 </html>
