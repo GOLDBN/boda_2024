@@ -29,11 +29,7 @@
 
 	<!-- Modernizr JS -->
     <script src="{{ asset('wedding/js/modernizr-2.6.2.min.js')}}"></script>
-	<!-- FOR IE9 below -->
-    <audio autoplay loop controls preload="auto" volume="0.5">
-        <source src="{{ asset('wedding/stand.mp3')}}" type="audio/mpeg">
-        <source src="{{ asset('wedding/stand.wav')}}" type="audio/wav">
-    </audio>
+
 	</head>
 	<body >
 
@@ -47,7 +43,7 @@
 				<div class="col-md-8 col-md-offset-2 text-center">
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
-							<h1 class="">Itzel &amp; Nacho</h1>
+							<h1 style="font-size: 50px;">Itzel &amp; Nacho</h1>
                             <h2 class="text-white">
                             Ya que vivimos juntos
                             tenemos lo necesario, pero si algo nos quieres obsequiar con dinero lo sabremos apreciar.
@@ -116,9 +112,6 @@
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 					<h2>Detalles del evento</h2>
-                    <h4 class="text-white" style="color:#fff">
-                        No hay código de vestimenta, sin embargo las mujeres no pueden asistir de Blanco.
-                    </h4>
 				</div>
 			</div>
 
@@ -142,6 +135,29 @@
 					</div>
 				</div>
 			</div>
+
+		</div>
+	</div>
+
+    <div id="fh5co-event">
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-md-8  text-center  animate-box">
+                    <h2 class="text-white" style="color:#f9c4d4; font-family: 'Sacramento', Arial, serif; font-size:35px">
+                     <b> No hay código de vestimenta, sin embargo las mujeres no pueden asistir de Blanco. </b>
+                    </h2>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+    <div id="fh5co-event" class="fh5co-bg" style="background-image:url('{{ asset('wedding/images/fondo15.jpg')}}');">
+		<div class="overlay"></div>
+		<div class="container">
+
 
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
