@@ -122,6 +122,7 @@
 							<div class="col-12 text-center">
 								<div class="event-wrap animate-box">
 									<h3>Ceremonia y fiesta</h3>
+                                    <h5>7 Junio 2024</h5>
                                     <ul class="text-white" style="font-size: 20px;list-style:none">
                                         <li style="color:#fff;text-decoration:none">5:00 pm recepción en la playa.</li>
                                         <li style="color:#fff;text-decoration:none">5:30 pm Inicio de la misa.</li>
@@ -208,23 +209,24 @@
     <script src="{{ asset('wedding/js/main.js')}}"></script>
 
     <script>
-        var d = new Date(new Date().getTime() + 419 * 120 * 120 * 2000);
+        var d = new Date(2024, 5, 7); // Ten en cuenta que el mes se especifica con base 0, por lo que 5 representa junio
 
-        // default example
+        // Ejemplo con la clase simplyCountdown
         simplyCountdown('.simply-countdown-one', {
             year: d.getFullYear(),
             month: d.getMonth() + 1,
             day: d.getDate()
         });
 
-        //jQuery example
+        // Ejemplo con jQuery
         $('#simply-countdown-losange').simplyCountdown({
             year: d.getFullYear(),
             month: d.getMonth() + 1,
             day: d.getDate(),
             enableUtc: false
-        });
+        });
     </script>
+
 
 	</body>
 </html>
