@@ -122,7 +122,7 @@
 							<div class="col-12 text-center">
 								<div class="event-wrap animate-box">
 									<h3>Ceremonia y fiesta</h3>
-                                    <h5>7 Junio 2024</h5>
+                                    <h3>7 Junio 2024</h3>
                                     <ul class="text-white" style="font-size: 20px;list-style:none">
                                         <li style="color:#fff;text-decoration:none">5:00 pm recepción en la playa.</li>
                                         <li style="color:#fff;text-decoration:none">5:30 pm Inicio de la misa.</li>
