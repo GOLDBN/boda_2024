@@ -137,6 +137,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+                    <h2>Fecha de Nuestra Boda</h2>
+                    <h3>07 Junio 2024</h3>
+                    <div class="simply-countdown simply-countdown-one"></div>
 					<h2>Confirma  tu asistencia</h2>
                     @if ($client->num_invitados_confirm == NULL)
                         <form method="POST" action="{{ route('update.inv', $client->code) }}" enctype="multipart/form-data" role="form">
