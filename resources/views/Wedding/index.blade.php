@@ -26,16 +26,13 @@
 	<!-- Theme style  -->
     <link rel="stylesheet" href="{{ asset('wedding/css/style.css')}}">
 
-
 	<!-- Modernizr JS -->
     <script src="{{ asset('wedding/js/modernizr-2.6.2.min.js')}}"></script>
 
 	</head>
 	<body >
 
-	<div class="fh5co-loader"></div>
-
-	<div id="page">
+	<div >
 	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url('{{ asset('wedding/images/4.jpg')}}');" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
@@ -43,12 +40,7 @@
 				<div class="col-md-8 col-md-offset-2 text-center">
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
-							<h1 style="font-size: 50px;">Itzel &amp; Nacho</h1>
-                            <h2 class="text-white">
-                            Ya que vivimos juntos
-                            tenemos lo necesario, pero si algo nos quieres obsequiar con dinero lo sabremos apreciar.
-                             </h2>
-							<div class="simply-countdown simply-countdown-one"></div>
+							<h1 style="font-size: 50px;margin-top: 300px;">Itzel &amp; Nacho</h1>
 						</div>
 					</div>
 				</div>
@@ -56,7 +48,92 @@
 		</div>
 	</header>
 
-	 <div id="fh5co-couple">
+	<div id="fh5co-couple" style="background-image:url('{{ asset('wedding/images/wedding.jpg')}}'); background-position: center; background-repeat: no-repeat; background-size: cover;"" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+        <div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+                    <audio autoplay loop controls preload="auto" volume="0.5">
+                        <source src="{{ asset('wedding/stand.mp3')}}" type="audio/mpeg">
+                        <source src="{{ asset('wedding/stand.wav')}}" type="audio/wav">
+                    </audio>
+                    <p  style="color:#000;font-size: 24px;margin-top: 30px;">Los momentos más felices<br>de la vida se tornan<br>
+                        gratos cuando tenemos la&nbsp;<br>
+                        suerte de compartirlos<br>
+                        con los familiares y amigos<br>
+                        más queridos.<br>
+                        Tú estás entre ellos.</p>
+
+                        <img style="width: 250px;height: 350px;" src="{{ asset('wedding/images/3sinFondo.png')}}">
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-event" class="fh5co-bg" style="background-image:url('{{ asset('wedding/images/novios.jpg')}}'); background-position: left; background-repeat: no-repeat; background-size: cover;"" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+					<h2>¿Dónde?</h2>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="display-t">
+					<div class="display-tc">
+						<div class="col-12 col-md-offset-1">
+							<div class="col-12 text-center">
+								<div class="event-wrap animate-box">
+									<h3 class="color:#fff">Acompañanos</h3>
+                                    <div class="slider-container">
+                                        <div class="slider">
+                                            <img src="{{ asset('wedding/images/2.jpg')}}" alt="Imagen 1">
+                                            <img src="{{ asset('wedding/images/6.jpg')}}" alt="Imagen 2">
+                                            <img src="{{ asset('wedding/images/fondo15.jpg')}}" alt="Imagen 3">
+                                        </div>
+                                    </div>
+                                    <h3 class="color:#fff">Casa Tasgar</h3>
+                                    <h3 class="color:#fff">Recepción <br><br>
+                                        5:00 pm
+                                    </h3>
+                                    <h3 class="color:#fff">Misa <br><br>
+                                        5:30 pm
+                                    </h3>
+                                    <h3 class="color:#fff">Fiesta <br><br>
+                                        7:00 pm - 4:00 am
+                                    </h3>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+    <div id="fh5co-event" class="fh5co-bg" style="background-image:url('{{ asset('wedding/images/novios.jpg')}}');background-position: right top; background-repeat: no-repeat; background-size: cover;" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+        <div class="container">
+			<div class="row">
+				<div class="col-md-8  text-center  animate-box">
+                    <h2 style="color:#fff; font-family: 'Sacramento', Arial, serif; font-size:55px">Codigo de Vestimenta</h2>
+                    <h2 class="text-white" style="color:#fff;font-size:25px">
+                        Queremos que se sientan libres de vestirse de forma cómoda y acorde a su estilo personal. Sin embargo, nos gustaría pedirles a las mujeres que eviten usar vestidos de color blanco o cualquier tono similar.
+                    </h2>
+                    <h2 style="color:#fff; font-family: 'Sacramento', Arial, serif; font-size:55px; margin-top: 80px;">Mesa de Regalos</h2>
+                    <h2 class="text-white" style="color:#fff;font-size:25px"">
+                        Ya que vivimos juntos <br>
+                        tenemos lo necesario, pero si algo nos quieres obsequiar con dinero lo sabremos apreciar.
+                    </h2>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+    <div id="fh5co-couple">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
@@ -100,58 +177,7 @@
                     @else
                         <img id="blah" src="{{asset('qr/'.$client->qr) }}" alt="{{$client->nombre}}" style="width: 150px; height: 150px;"/>
                     @endif
-
 			</div>
-		</div>
-	</div>
-
-	<div id="fh5co-event" class="fh5co-bg" style="background-image:url('{{ asset('wedding/images/6.jpg')}}');">
-		<div class="overlay"></div>
-		<div class="container">
-
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-					<h2>Detalles del evento</h2>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="display-t">
-					<div class="display-tc">
-						<div class="col-12 col-md-offset-1">
-							<div class="col-12 text-center">
-								<div class="event-wrap animate-box">
-									<h3>Ceremonia y fiesta</h3>
-                                    <h3>7 Junio 2024</h3>
-                                    <ul class="text-white" style="font-size: 20px;list-style:none">
-                                        <li style="color:#fff;text-decoration:none">5:00 pm recepción en la playa.</li>
-                                        <li style="color:#fff;text-decoration:none">5:30 pm Inicio de la misa.</li>
-                                        <li style="color:#fff;text-decoration:none">6:30 pm recepción en el jardín.</li>
-                                        <li style="color:#fff;text-decoration:none">7:00 pm a 4:00 am fiesta.</li>
-                                    </ul>
-								</div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-
-    <div id="fh5co-event">
-		<div class="container">
-
-
-			<div class="row">
-				<div class="col-md-8  text-center  animate-box">
-                    <h2 class="text-white" style="color:#f9c4d4; font-family: 'Sacramento', Arial, serif; font-size:35px">
-                     <b> No hay código de vestimenta, sin embargo las mujeres no pueden asistir de Blanco. </b>
-                    </h2>
-				</div>
-			</div>
-
 		</div>
 	</div>
 
