@@ -48,8 +48,8 @@
 		</div>
 	</header>
 
-	<div id="fh5co-couple" style="background-image:url('{{ asset('wedding/images/wedding.jpg')}}'); background-position: center; background-repeat: no-repeat; background-size: cover;"" data-stellar-background-ratio="0.5">
-		<div class="overlay"></div>
+	<div id="fh5co-couple" style="background-image:url('{{ asset('wedding/images/wedding.jpg')}}'); background-position: center; background-repeat: no-repeat;" data-stellar-background-ratio="0.5">
+
         <div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
@@ -69,7 +69,7 @@
 		</div>
 	</div>
 
-	<div id="fh5co-event" class="fh5co-bg" style="background-image:url('{{ asset('wedding/images/novios.jpg')}}'); background-position: left; background-repeat: no-repeat; background-size: cover;"" data-stellar-background-ratio="0.5">
+	<div id="fh5co-event" class="fh5co-bg" style="background-image:url('{{ asset('wedding/images/novios.jpg')}}'); background-position: left; background-repeat: no-repeat; background-size: cover;" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
 			<div class="row">
@@ -113,7 +113,7 @@
 		</div>
 	</div>
 
-    <div id="fh5co-event" class="fh5co-bg" style="background-image:url('{{ asset('wedding/images/novios.jpg')}}');background-position: right top; background-repeat: no-repeat; background-size: cover;" data-stellar-background-ratio="0.5">
+    <div id="fh5co-event" class="fh5co-bg" style="background-image:url('{{ asset('wedding/images/novia.jpg')}}')" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
         <div class="container">
 			<div class="row">
