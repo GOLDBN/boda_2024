@@ -191,7 +191,7 @@
 
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-					<h2>Direección</h2>
+					<h2>Dirección</h2>
                     <a href="https://goo.gl/maps/Zs33vhPRxK6tp9KF6" target="_blank" >
                         <strong style="color:#fff">  Blvrd Barra Vieja, 39930 Acapulco de Juárez, Gro.</strong>
                     </a>
