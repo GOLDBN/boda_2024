@@ -140,10 +140,13 @@
                     <h2>Fecha de Nuestra Boda</h2>
                     <h3>07 Junio 2024</h3>
                     <div class="simply-countdown simply-countdown-one"></div>
-					<h2>Confirma  tu asistencia</h2>
-                    <p>Recuerda que tienes hasta el 15 de Noviembre para confirmar tu asistencia.</p>
                     @if ($client->num_invitados_confirm == NULL)
-                        <form method="POST" action="{{ route('update.inv', $client->code) }}" enctype="multipart/form-data" role="form">
+                        <p>Estamos tristes de que algunos no podrán acompañarnos, entendemos que la vida puede ser impredecible.
+                            Agradecemos profundamente el amor y apoyo que todos ustedes nos han brindado.
+                                <br><br>
+                            Les enviaremos pensamientos llenos de cariño y esperamos poder compartir momentos especiales
+                            con ustedes en el futuro.</p>
+                        {{-- <form method="POST" action="{{ route('update.inv', $client->code) }}" enctype="multipart/form-data" role="form">
                             @csrf
                             <input type="hidden" name="_method" value="PATCH">
                             <div class="row g-3">
@@ -177,8 +180,13 @@
                                 <button type="submit" class="btn btn-primary" style="margin-top:3rem;">Registrar</button>
                                 </div>
                             </div>
-                        </form>
+                        </form> --}}
                     @else
+                    <p>Queremos expresar nuestro sincero agradecimiento a todos los que han confirmado su asistencia
+                        a nuestra boda. Estamos emocionados de celebrar este día tan especial con todos ustedes.
+                            <br><br>
+                        Agradecemos mucho el tiempo que han dedicado para responder.
+                        ¡Nos vemos en la boda para compartir momentos inolvidables juntos!</p>
                         <img id="blah" src="{{asset('qr/'.$client->qr) }}" alt="{{$client->nombre}}" style="width: 150px; height: 150px;"/>
                     @endif
 			</div>
