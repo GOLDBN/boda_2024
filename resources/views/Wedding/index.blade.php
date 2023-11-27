@@ -68,50 +68,52 @@
 			</div>
 		</div>
 	</div>
+    @if ($client->num_invitados_confirm != NULL)
+        <div id="fh5co-event" class="fh5co-bg" style="background-image:url('{{ asset('wedding/images/novios.jpg')}}'); background-position: left; background-repeat: no-repeat; background-size: cover;" data-stellar-background-ratio="0.5">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+                        <h2>¿Dónde?</h2>
+                    </div>
+                </div>
 
-	<div id="fh5co-event" class="fh5co-bg" style="background-image:url('{{ asset('wedding/images/novios.jpg')}}'); background-position: left; background-repeat: no-repeat; background-size: cover;" data-stellar-background-ratio="0.5">
-        <div class="overlay"></div>
-        <div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-					<h2>¿Dónde?</h2>
-				</div>
-			</div>
 
-			<div class="row">
-				<div class="display-t">
-					<div class="display-tc">
-						<div class="col-12 col-md-offset-1">
-							<div class="col-12 text-center">
-								<div class="event-wrap animate-box">
-									<h3 class="color:#fff">Acompañanos</h3>
-                                    <div class="slider-container">
-                                        <div class="slider">
-                                            <img src="{{ asset('wedding/images/2.jpg')}}" alt="Imagen 1">
-                                            <img src="{{ asset('wedding/images/6.jpg')}}" alt="Imagen 2">
-                                            <img src="{{ asset('wedding/images/fondo15.jpg')}}" alt="Imagen 3">
+                    <div class="row">
+                        <div class="display-t">
+                            <div class="display-tc">
+                                <div class="col-12 col-md-offset-1">
+                                    <div class="col-12 text-center">
+                                        <div class="event-wrap animate-box">
+                                            <h3 class="color:#fff">Acompañanos</h3>
+                                            <div class="slider-container">
+                                                <div class="slider">
+                                                    <img src="{{ asset('wedding/images/2.jpg')}}" alt="Imagen 1">
+                                                    <img src="{{ asset('wedding/images/6.jpg')}}" alt="Imagen 2">
+                                                    <img src="{{ asset('wedding/images/fondo15.jpg')}}" alt="Imagen 3">
+                                                </div>
+                                            </div>
+                                            <h3 class="color:#fff">Casa Tasgar</h3>
+                                            <h3 class="color:#fff">Recepción <br><br>
+                                                5:00 pm
+                                            </h3>
+                                            <h3 class="color:#fff">Misa <br><br>
+                                                5:30 pm
+                                            </h3>
+                                            <h3 class="color:#fff">Fiesta <br><br>
+                                                7:00 pm - 4:00 am
+                                            </h3>
                                         </div>
                                     </div>
-                                    <h3 class="color:#fff">Casa Tasgar</h3>
-                                    <h3 class="color:#fff">Recepción <br><br>
-                                        5:00 pm
-                                    </h3>
-                                    <h3 class="color:#fff">Misa <br><br>
-                                        5:30 pm
-                                    </h3>
-                                    <h3 class="color:#fff">Fiesta <br><br>
-                                        7:00 pm - 4:00 am
-                                    </h3>
-								</div>
-							</div>
-						</div>
+                                </div>
 
-					</div>
-				</div>
-			</div>
+                            </div>
+                        </div>
+                    </div>
 
-		</div>
-	</div>
+            </div>
+        </div>
+    @endif
 
     <div id="fh5co-event" class="fh5co-bg" style="background-image:url('{{ asset('wedding/images/novia.jpg')}}')" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
@@ -193,25 +195,27 @@
 		</div>
 	</div>
 
-    <div id="fh5co-event" class="fh5co-bg" style="background-image:url('{{ asset('wedding/images/fondo15.jpg')}}');">
-		<div class="overlay"></div>
-		<div class="container">
+    @if ($client->num_invitados_confirm != NULL)
+        <div id="fh5co-event" class="fh5co-bg" style="background-image:url('{{ asset('wedding/images/fondo15.jpg')}}');">
+            <div class="overlay"></div>
+            <div class="container">
 
 
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-					<h2>Dirección</h2>
-                    <a href="https://goo.gl/maps/Zs33vhPRxK6tp9KF6" target="_blank" >
-                        <strong style="color:#fff">  Blvrd Barra Vieja, 39930 Acapulco de Juárez, Gro.</strong>
-                    </a>
-				</div>
-                <div class="col-12">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30573.268996016017!2d-99.66595058068847!3d16.693957758196074!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ca4272a740fa87%3A0xc234e25b703a9c5a!2sCasa%20Tasgar!5e0!3m2!1ses-419!2smx!4v1683734205267!5m2!1ses-419!2smx" height="400" style="border:0; width:366px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+                        <h2>Dirección</h2>
+                        <a href="https://goo.gl/maps/Zs33vhPRxK6tp9KF6" target="_blank" >
+                            <strong style="color:#fff">  Blvrd Barra Vieja, 39930 Acapulco de Juárez, Gro.</strong>
+                        </a>
+                    </div>
+                    <div class="col-12">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30573.268996016017!2d-99.66595058068847!3d16.693957758196074!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ca4272a740fa87%3A0xc234e25b703a9c5a!2sCasa%20Tasgar!5e0!3m2!1ses-419!2smx!4v1683734205267!5m2!1ses-419!2smx" height="400" style="border:0; width:366px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
                 </div>
-			</div>
 
-		</div>
-	</div>
+            </div>
+        </div>
+    @endif
 
 	</div>
 
