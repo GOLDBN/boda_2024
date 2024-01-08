@@ -143,12 +143,12 @@
                     <h3>07 Junio 2024</h3>
                     <div class="simply-countdown simply-countdown-one"></div>
                     @if ($client->num_invitados_confirm == NULL)
-                        <p>Estamos tristes de que algunos no podrán acompañarnos, entendemos que la vida puede ser impredecible.
+                        {{-- <p>Estamos tristes de que algunos no podrán acompañarnos, entendemos que la vida puede ser impredecible.
                             Agradecemos profundamente el amor y apoyo que todos ustedes nos han brindado.
                                 <br><br>
                             Les enviaremos pensamientos llenos de cariño y esperamos poder compartir momentos especiales
-                            con ustedes en el futuro.</p>
-                        {{-- <form method="POST" action="{{ route('update.inv', $client->code) }}" enctype="multipart/form-data" role="form">
+                            con ustedes en el futuro.</p> --}}
+                        <form method="POST" action="{{ route('update.inv', $client->code) }}" enctype="multipart/form-data" role="form">
                             @csrf
                             <input type="hidden" name="_method" value="PATCH">
                             <div class="row g-3">
@@ -179,10 +179,10 @@
                                 </div>
 
                                 <div class="col-12" >
-                                <button type="submit" class="btn btn-primary" style="margin-top:3rem;">Registrar</button>
+                                <button type="submit" class="btn btn-primary" style="margin-top:3rem;">Confirmar</button>
                                 </div>
                             </div>
-                        </form> --}}
+                        </form>
                     @else
                     <p>Queremos expresar nuestro sincero agradecimiento a todos los que han confirmado su asistencia
                         a nuestra boda. Estamos emocionados de celebrar este día tan especial con todos ustedes.
