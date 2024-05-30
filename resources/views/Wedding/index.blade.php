@@ -95,10 +95,10 @@
                                             </div>
                                             <h3 class="color:#fff">Casa Tasgar</h3>
                                             <h3 class="color:#fff">Recepción <br><br>
-                                                5:00 pm
+                                                5:30 pm
                                             </h3>
                                             <h3 class="color:#fff">Misa <br><br>
-                                                5:30 pm
+                                                6:00 pm
                                             </h3>
                                             <h3 class="color:#fff">Fiesta <br><br>
                                                 7:00 pm - 4:00 am
