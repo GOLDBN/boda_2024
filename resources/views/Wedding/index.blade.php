@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Boda Itzel & Nacho</title>
+	<title>Boda Itzel & Nachos</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Boda Itzel & Nacho 7 Junio 2024" />
 	<meta name="keywords" content="fBoda Itzel & Nacho" />
