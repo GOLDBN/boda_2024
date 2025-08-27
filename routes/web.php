@@ -28,6 +28,10 @@ Route::get('/demo', function () {
     return view('Wedding.index');
 });
 
+Route::get('/boda', function () {
+    return view('Wedding.inicio');
+});
+
 Auth::routes();
 
 Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
