@@ -45,7 +45,7 @@ class ClientController extends Controller
         $maximo_personas = $client->num_invitados_perm;
         $maximo_niños = $client->num_invitados_perm_n;
 
-        return view('Wedding.index', compact('client', 'maximo_personas', 'maximo_niños'));
+        return view('Wedding.inicio', compact('client', 'maximo_personas', 'maximo_niños'));
     }
 
     public function update_single(Request $request, $code){

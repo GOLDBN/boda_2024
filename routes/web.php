@@ -29,7 +29,7 @@ Route::get('/demo', function () {
 });
 
 Route::get('/boda', function () {
-    return view('Wedding.inicio');
+    return view('Wedding.index');
 });
 
 Auth::routes();

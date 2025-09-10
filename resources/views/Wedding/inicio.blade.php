@@ -44,7 +44,13 @@
     z-index: 0;
   }
 
-  .img_ramita{ width: 50%; }
+  .img_ramita{
+        width: 40%;
+    }
+
+  .img_acu{
+    width: 30%;
+  }
 
   .titulo_prinicpal{
     font-family: 'AdoraBouton_Regular';
@@ -91,20 +97,22 @@
 
   /* Contador */
   .contador .box{
-    background:#fff;
+    background:#ffffff00;
     border-radius:14px;
     padding: clamp(10px, 2.5vw, 16px) clamp(14px, 3vw, 22px);
     text-align:center;
     min-width: clamp(70px, 16vw, 120px);
-    box-shadow: 0 6px 20px rgba(0,0,0,.08);
+    /* box-shadow: 0 6px 20px rgba(0,0,0,.08); */
   }
+
   .contador .box span{
     display:block;
     font-family:'CaviarDreams_Bold';
-    font-size: clamp(22px, 8vw, 42px);
+    font-size: clamp(22px, 8vw, 22px);
     line-height:1;
     color:#744C27;
   }
+
   .contador .box small{
     display:block;
     margin-top:6px;
@@ -140,7 +148,7 @@
         </div>
 
         <div class="col-12">
-          <h3 class="text-center titulos_h2">TE ESPERAMOS PARA CELEBRAR NUESTRA BODA</h3>
+          <h3 class="text-center titulos_h2 mb-3">TE ESPERAMOS PARA CELEBRAR NUESTRA BODA</h3>
           <p class="text-center titulos_h2">FALTAN</p>
 
           <!-- Contador -->
@@ -170,7 +178,7 @@
     <section class="container-lg px-2 px-md-3 px-lg-4 py-0 py-md-3 py-lg-3 position-relative">
       <div class="row">
         <div class="col-12">
-          <h1 class="text-center titulos_h3">Lugar</h1>
+          <h1 class="text-center titulos_h3 mt-3">Lugar</h1>
         </div>
 
         <div class="col-12">
@@ -197,11 +205,37 @@
     <section class="container-lg px-2 px-md-3 px-lg-4 py-0 py-md-3 py-lg-3 position-relative">
       <div class="row">
         <div class="col-12">
-          <h1 class="text-center titulos_h3">Orden del día</h1>
+          <h1 class="text-center titulos_h3 mt-3">Orden del día</h1>
           <p class="text-center">
-            <img src="{{ asset('assets/img/Recurso3.png') }}" alt="decoración" class="img_lugar">
+            <img src="{{ asset('assets/img/orden.png') }}" alt="decoración" class="img_lugar">
           </p>
         </div>
+      </div>
+    </section>
+
+    <section class="container-lg px-2 px-md-3 px-lg-4 py-0 py-md-3 py-lg-3 position-relative">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="text-center titulos_h3 mt-3">Código de vestimenta</h1>
+        </div>
+
+        <div class="col-12">
+          <p class="text-center">
+            <img src="{{ asset('assets/img/Vestimenta.png') }}" alt="decoración" class="img_acu">
+          </p>
+        </div>
+
+        <div class="col-12">
+          <p class="text-center titulos_h2">
+            FORMAL <br>
+            Para garantizar la comodidad de todos nuestros invitados, te pedimos que
+            consideres llevar tacones adecuados para caminar sobre pasto y gravilla.
+            Evita tacones de aguja ya que pueden hundirse en el suelo. Recuerda que
+            habrá toro mecánico y otras amenidades para quien guste aprovecharlas.
+            Evitar colores beige, verde oliva y vino
+          </p>
+        </div>
+
       </div>
     </section>
 
@@ -214,7 +248,8 @@
 
         <div class="col-12 mt-3">
           <div class="row g-4">
-            <div class="col-12 col-md-6 col-lg-4">
+
+            <div class="col-6 col-md-6 col-lg-6">
               <div class="card_hospedaje p-3">
                 <h5 class="text-center mb-2">HOTEL AQUETZALLI</h5>
                 <h6 class="mb-2">Tiempo aproximado : 15 minutos</h6>
@@ -227,7 +262,7 @@
               </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-6 col-md-6 col-lg-6">
               <div class="card_hospedaje p-3">
                 <h5 class="text-center mb-2">RANCHO MACLOY</h5>
                 <h6 class="mb-2">Tiempo aproximado : 23 minutos</h6>
@@ -239,7 +274,9 @@
               </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-3"></div>
+
+            <div class="col-6 col-md-6 col-lg-6">
               <div class="card_hospedaje p-3">
                 <h5 class="text-center mb-2">OTRA OPCIÓN</h5>
                 <h6 class="mb-2">Tiempo aproximado : 20 minutos</h6>
@@ -249,6 +286,10 @@
                 </p>
               </div>
             </div>
+
+            <div class="col-3"></div>
+
+
           </div>
         </div>
 
@@ -259,7 +300,12 @@
     <section class="container-lg px-2 px-md-3 px-lg-4 py-0 py-md-3 py-lg-3 position-relative">
       <div class="row">
         <div class="col-12">
-          <h1 class="text-center titulos_h3">Presentes</h1>
+          <h1 class="text-center titulos_h3 mt-3">Presentes</h1>
+
+          <p class="text-center">
+            <img src="{{ asset('assets/img/acu_9.png') }}" alt="decoración" class="img_acu">
+          </p>
+
           <p class="text-center titulos_h2">
             Su presencia en nuestra boda es nuestro mejor regalo, pero si
             desean tener un detalle con nosotros, les dejamos estas
@@ -267,13 +313,17 @@
           </p>
 
           <p class="text-center p-3">
-            <a class="btn_blanco" href="https://amazon.com" target="_blank" rel="noopener noreferrer">AMAZON</a>
+            <a class="btn_blanco" href="https://www.amazon.com.mx/wedding/registry/3IBEO4EY4ETYCm" target="_blank" rel="noopener noreferrer">AMAZON</a>
           </p>
           <p class="text-center p-3">
-            <a class="btn_blanco" href="https://liverpool.com.mx" target="_blank" rel="noopener noreferrer">LIVERPOOL</a>
+            <a class="btn_blanco" href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51752229" target="_blank" rel="noopener noreferrer">LIVERPOOL</a>
           </p>
           <p class="text-center p-3">
-            <a class="btn_blanco" href="#" target="_blank" rel="noopener noreferrer">DATOS BANCARIOS</a>
+
+            <a type="button" class="btn btn_blanco" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                DATOS BANCARIOS
+            </a>
+
           </p>
         </div>
       </div>
@@ -284,6 +334,11 @@
       <div class="row">
         <div class="col-12">
           <h1 class="text-center titulos_h3">Dots Memories</h1>
+
+          <p class="text-center">
+            <img src="{{ asset('assets/img/acu_10.png') }}" alt="decoración" class="img_acu">
+          </p>
+
           <p class="text-center titulos_h2">
             No nos queremos perder nada, por favor ayúdanos a guardar
             las mejores fotos y vídeos de momentos de la boda
@@ -301,8 +356,108 @@
         <div class="col-12">
           <h1 class="text-center titulos_h3">Confirmar asistencia</h1>
         </div>
+
+        <div class="col-12">
+          <p class="text-center titulos_h2">
+            NOS ENCANTARÍA QUE SEAS PARTE DE ESTE DÍA TAN ESPECIAL! <br>
+            Ingresa los datos para continuar
+          </p>
+        </div>
+
+        <div class="col-12">
+
+                    @if ($client->num_invitados_confirm == NULL)
+                        <form method="POST" action="{{ route('update.inv', $client->code) }}" enctype="multipart/form-data" role="form">
+                            @csrf
+                            <input type="hidden" name="_method" value="PATCH">
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <label for="inputAddress" class="form-label titulos_h2">Nombre completo</label>
+                                    <input type="text" class="form-control" name="nombre" id="nombre" required>
+                                </div>
+
+                                <div class="col-md-6" style="margin-top:2rem;">
+                                <label for="inputEmail4" class="form-label titulos_h2">Num de adultos</label>
+                                    <select class="form-control" name="num_invitados_confirm" id="num_invitados_confirm" required>
+                                        <option value="">Confirma cuántos adultos son</option>
+                                        @for ($i = 1; $i <= $maximo_personas; $i++)
+                                            <option value="{{ $i }}">{{ $i }}</option>
+                                        @endfor
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6" style="margin-top:2rem;">
+                                <label for="inputPassword4" class="form-label titulos_h2">Num de niño</label>
+                                    <select class="form-control" name="num_invitados_confirm_n" id="num_invitados_confirm_n" required>
+                                        <option value="">¿Cuántos niños irán contigo?</option>
+                                        <option value="0">0</option>
+                                        @for ($i = 1; $i <= $maximo_niños; $i++)
+                                            <option value="{{ $i }}">{{ $i }}</option>
+                                        @endfor
+                                    </select>
+                                </div>
+
+                                <div class="col-12" >
+                                    <p class="text-center">
+                                        <a type="submit" class="btn btn_blanco mt-3" style="padding: 10px 80px 10px 80px; font-size: 15px;">
+                                            CONFIRMAR LUGARES
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    @else
+
+                    <div class="col-12">
+                        <p class="text-center titulos_h2">
+                        ¡Esperamos que puedan compartir esta celebración
+                        junto a nosotros! <br> <br>
+                        ¡MUCHAS GRACIAS!
+                        </p>
+                    </div>
+
+                    @endif
+
+        </div>
+
+        <div class="col-12">
+          <p class="text-center">
+            <img src="{{ asset('assets/img/Recurso1.png') }}" alt="decoración" class="img_ramita">
+          </p>
+        </div>
+
       </div>
     </section>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Datos bancarios</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="row">
+            <div class="col-12">
+                <p class="text-center titulos_h2">
+                    Mi cuenta BBVA: Laura Hortencia Perez Hernandez  <br> <br>
+                    Cuenta: 156 573 8501 <br> <br>
+                    Cuenta CLABE: 012 180 01565738501 3 <br> <br>
+                    Código SWIFT: BCMRMXMMPYM <br> <br>
+                    Tarjeta de débito: 4152 3143 0356 5397 <br> <br>
+                </p>
+            </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 

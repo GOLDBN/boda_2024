@@ -66,23 +66,199 @@
 											<td>{{ $client->telefono }}</td>
 
                                             <td>
-                                                    <a class="btn btn-sm btn-primary" href="{{ route('single.inv', $client->code) }}" target="_blanck">Ver</a>
-                                                    <a type="button" class="btn btn-sm" target="_blank"
-                                                            href="https://wa.me/52{{$client->telefono}}?text=%C2%A1Hola!%20😄%20Nacho%20y%20yo%20estamos%20emocionados%20de%20informarles%20que%20celebraremos%20nuestro%20matrimonio%20el%20*7%20de%20junio%20de%202024%20en%20Acapulco*.%20Si%20a%C3%BAn%20no%20has%20confirmado%20tu%20asistencia,%20no%20te%20preocupes;%20a%C3%BAn%20tienes%20tiempo%20hasta%20el%20*30%20de%20abril*%20para%20hacerlo.%20%C2%A1Les%20deseamos%20un%20maravilloso%20a%C3%B1o%20y%20esperamos%20con%20ansias%20su%20presencia%20en%20este%20d%C3%ADa%20tan%20especial!%20%F0%9F%8E%89%20%C2%A1Saludos!%20%F0%9F%91%B0%F0%9F%A4%B0%E2%80%8D%E2%99%82%EF%B8%8F%20%0A%F0%9F%91%89%20{{ urlencode(route('single.inv', $client->code)) }}"
-                                                            style="background: #00BB2D; color: #ffff">Enviar</a>
+
+
+
+                                                    <a class="btn btn-sm btn-primary" href="{{ route('single.inv', $client->code) }}" target="_blanck">Ver Invitacion</a>
+<a href="#"
+   class="btn btn-sm btn-wa-modal"
+   data-phone="{{ $client->telefono }}"
+   data-name="{{ $client->nombre }}"
+   data-url="{{ route('single.inv', $client->code) }}"
+   data-default-code="{{ $client->country_code ?? $client->lada ?? '52' }}"
+   style="background:#00BB2D; color:#fff">
+   WhatsApp
+</a>
+
                                                     <a class="btn btn-sm btn-success" href="{{ route('clients.edit',$client->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                                                     <a class="btn btn-sm btn-primary " href="{{ route('clients.show',$client->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>
                                                 </form>
                                             </td>
                                         </tr>
                                     @endforeach
+
+
+
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
+<!-- Modal WhatsApp Config -->
+<div class="modal fade" id="waModal" tabindex="-1" aria-labelledby="waModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header py-2">
+        <h5 class="modal-title" id="waModalLabel">Enviar WhatsApp</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="mb-2">
+          <label class="form-label">Código de país (LADA)</label>
+          <input type="text" id="waCountryCode" class="form-control" placeholder="52" list="ladaList">
+          <datalist id="ladaList">
+            <option value="52">México</option>
+            <option value="1">EE.UU./Canadá</option>
+            <option value="34">España</option>
+            <option value="57">Colombia</option>
+            <option value="54">Argentina</option>
+            <option value="56">Chile</option>
+            <option value="51">Perú</option>
+            <option value="593">Ecuador</option>
+            <option value="502">Guatemala</option>
+            <option value="506">Costa Rica</option>
+          </datalist>
+          <small class="text-muted d-block mt-1">
+            Si el teléfono empieza con “+” o “00”, se usará como internacional y se ignorará la LADA.
+          </small>
+        </div>
+
+        <div class="mb-2">
+          <label class="form-label">Teléfono</label>
+          <input type="text" id="waPhone" class="form-control" placeholder="5555555555">
+        </div>
+
+        <div class="mb-2">
+          <label class="form-label">Mensaje</label>
+          <textarea id="waMessage" rows="5" class="form-control"></textarea>
+        </div>
+
+        <div class="border rounded p-2 mt-3">
+          <div class="small text-muted">Vista previa del enlace:</div>
+          <a id="waPreview" href="#" target="_blank" class="small text-break d-inline-block" style="max-width:100%;">—</a>
+        </div>
+      </div>
+
+      <div class="modal-footer py-2">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <a id="waSendBtn" href="#" target="_blank" class="btn btn-success">Enviar por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
                 {!! $clients->links() !!}
             </div>
         </div>
     </div>
 @endsection
+
+<script>
+(function(){
+  let modalEl, modal, $msg, $code, $phone, $preview, $sendBtn;
+
+  document.addEventListener('DOMContentLoaded', function(){
+    modalEl  = document.getElementById('waModal');
+    modal    = new bootstrap.Modal(modalEl);
+    $msg     = $('#waMessage');
+    $code    = $('#waCountryCode');
+    $phone   = $('#waPhone');
+    $preview = $('#waPreview');
+    $sendBtn = $('#waSendBtn');
+
+    // Abrir modal desde cada fila
+    $(document).on('click', '.btn-wa-modal', function(e){
+      e.preventDefault();
+
+      const phone   = ($(this).data('phone') || '').toString().trim();
+      const name    = ($(this).data('name')  || '').toString().trim();
+      const url     = ($(this).data('url')   || '').toString().trim();
+      const defCode = ($(this).data('default-code') || '52').toString().replace(/\D+/g,'');
+
+      // Prellenar campos
+      $code.val(defCode);
+      $phone.val(phone.replace(/\s+/g,''));
+      $msg.val(getDefaultMessage(name, url));
+
+      // Refrescar preview y mostrar modal
+      refreshPreview();
+      modal.show();
+    });
+
+    // Limpiar a dígitos mientras escriben (no toca el “+” inicial si existe)
+    $phone.on('input', function(){
+      const v = this.value.trim();
+      if (v.startsWith('+') || v.startsWith('00')) {
+        // Permitimos + o 00, el resto a dígitos
+        let cleaned = v.startsWith('+') ? '+' + v.slice(1).replace(/\D+/g,'')
+                                        : '00' + v.slice(2).replace(/\D+/g,'');
+        this.value = cleaned;
+      } else {
+        this.value = v.replace(/\D+/g,'');
+      }
+      refreshPreview();
+    });
+
+    $code.on('input', function(){
+      this.value = this.value.replace(/\D+/g,'');
+      refreshPreview();
+    });
+
+    $msg.on('input', refreshPreview);
+
+    // Enviar (abre en nueva pestaña el mismo href del preview)
+    $sendBtn.on('click', function(e){
+      const href = $sendBtn.attr('href');
+      if (!href || href === '#') {
+        e.preventDefault();
+        Swal?.fire?.('Teléfono inválido','Revisa el número antes de enviar.','warning') || alert('Teléfono inválido');
+        return;
+      }
+      // Modal se puede cerrar al clic
+      modal.hide();
+    });
+  });
+
+  function getDefaultMessage(nombre, link){
+    // Ajusta el texto a tu gusto
+    const n = nombre ? nombre : '';
+    const l = link   ? link   : '';
+    return `¡Hola${n ? ' ' + n : ''}! 😄 Nacho y yo estamos emocionados de informarles que celebraremos nuestro matrimonio el *7 de junio de 2024 en Acapulco*. ` +
+           `Si aún no has confirmado tu asistencia, no te preocupes; aún tienes tiempo hasta el *30 de abril* para hacerlo. ` +
+           `¡Les deseamos un maravilloso año y esperamos con ansias su presencia en este día tan especial! 🎉 ¡Saludos! 👨‍❤️‍👨\n` +
+           `👉 ${l}`;
+  }
+
+  function buildWaNumber(){
+    const raw = ($phone.val() || '').trim();
+    if (!raw) return '';
+
+    if (raw.startsWith('+')) {
+      return raw.replace(/\D+/g,''); // quita '+'
+    }
+    if (raw.startsWith('00')) {
+      return raw.replace(/\D+/g,'').replace(/^00/,''); // quita '00'
+    }
+    const code = ($code.val() || '52').replace(/\D+/g,'') || '52';
+    const digits = raw.replace(/\D+/g,'');
+    return code + digits;
+  }
+
+  function refreshPreview(){
+    const waNum = buildWaNumber();
+    const msg   = ($msg.val() || '').trim();
+    if (!waNum) {
+      $preview.text('—');
+      $preview.attr('href', '#');
+      $sendBtn.attr('href', '#');
+      return;
+    }
+    const href = 'https://wa.me/' + waNum + '?text=' + encodeURIComponent(msg);
+    $preview.text(href);
+    $preview.attr('href', href);
+    $sendBtn.attr('href', href);
+  }
+})();
+</script>

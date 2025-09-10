@@ -29,7 +29,7 @@
                 </a>
             </li>
 
-            <li class="nav-item">
+            {{-- <li class="nav-item">
               <a href="#navbar-maps" class="nav-link {{ (Request::is('users*') ? 'active' : '') }}{{ (Request::is('roles*') ? 'active' : '') }}" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-maps">
                 <i class="ni ni-settings text-primary"></i>
                 <span class="nav-link-text">Roles y Permisos</span>
@@ -46,7 +46,7 @@
 
                 </ul>
               </div>
-            </li>
+            </li> --}}
 
 {{--            <li class="nav-item">--}}
 {{--              <a class="nav-link" href="../../pages/widgets.html">--}}
