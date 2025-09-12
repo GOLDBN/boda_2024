@@ -399,9 +399,7 @@
 
                                 <div class="col-12" >
                                     <p class="text-center">
-                                        <a type="submit" class="btn btn_blanco mt-3" style="padding: 10px 80px 10px 80px; font-size: 15px;">
-                                            CONFIRMAR LUGARES
-                                        </a>
+                                        <button type="submit" class="btn btn_blanco" style="margin-top:3rem;">Confirmar</button>
                                     </p>
                                 </div>
                             </div>
