@@ -221,15 +221,15 @@
     });
   });
 
-  function getDefaultMessage(nombre, link){
-    // Ajusta el texto a tu gusto
-    const n = nombre ? nombre : '';
-    const l = link   ? link   : '';
-    return `¡Hola${n ? ' ' + n : ''}! 😄 Nacho y yo estamos emocionados de informarles que celebraremos nuestro matrimonio el *7 de junio de 2024 en Acapulco*. ` +
-           `Si aún no has confirmado tu asistencia, no te preocupes; aún tienes tiempo hasta el *30 de abril* para hacerlo. ` +
-           `¡Les deseamos un maravilloso año y esperamos con ansias su presencia en este día tan especial! 🎉 ¡Saludos! 👨‍❤️‍👨\n` +
-           `👉 ${l}`;
-  }
+    function getDefaultMessage(nombre, link, fechaBoda = '22 de Noviembre de 2025', fechaLimite = '22 de Octubre') {
+    const n = nombre ? ` ${nombre}` : '';
+    const l = link ? link : '';
+    return `¡Hola${n}! 😄 Estamos emocionados de informarles que celebraremos nuestro matrimonio el ${fechaBoda}. ` +
+            `Si aún no han confirmado su asistencia, no se preocupen; pueden hacerlo mediante este link con el nombre al inicio, ` +
+            `tienen hasta el ${fechaLimite}. ¡Les deseamos un maravilloso año y esperamos contar con su presencia en este día tan especial! ` +
+            `🎉 ¡Saludos! 👨‍❤️‍👨\n👉 ${l}`;
+    }
+
 
   function buildWaNumber(){
     const raw = ($phone.val() || '').trim();
