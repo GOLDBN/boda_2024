@@ -356,8 +356,13 @@
             las mejores fotos y vídeos de momentos de la boda
           </p>
           <p class="text-center titulos_h2">
-            <a class="btn_blanco" href="#" target="_blank" rel="noopener noreferrer">APLICACIÓN</a>
+            <a class="btn_blanco" href="https://web.dotstheapp.com/a?group=2137490&code=IckKdvtm&dlBy=luisg.diazb.arq&utm_source=guest&utm_medium=share&utm_campaign=guest_event_album&force_app=1" target="_blank" rel="noopener noreferrer">APLICACIÓN</a>
           </p>
+
+          <p class="text-center titulos_h2">
+            Es necesario descargar e instalar la aplicación en tu dispositivo móvil para subir fotos y videos
+          </p>
+
         </div>
       </div>
     </section>
