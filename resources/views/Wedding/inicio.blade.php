@@ -24,8 +24,8 @@
   }
 
   @font-face {
-    font-family: Savoye;
-    src: url('{{ asset('assets/img/Savoye.ttf') }}');
+    font-family: Savoye LET;
+    src: url('{{ asset('assets/img/Savoye LET.ttf') }}');
   }
 
   html, body { min-height: 100%; }
@@ -61,26 +61,26 @@
 
   .titulo_prinicpal{
     font-family: 'AdoraBouton_Regular';
-    font-size: clamp(40px, 10vw, 90px);
-    color: #C5A88C;
+    font-size: clamp(45px, 14vw, 120px);
+    color: #b17f4a;
   }
   .titulos_h2{
     font-family: 'CaviarDreams_Bold';
     font-size: clamp(16px, 2.5vw, 25px);
-    color: #C5A88C;
+    color: #b17f4a;
     font-weight: bold;
     text-decoration: none;
   }
   .titulos_h3{
-    font-family: 'Savoye';
+    font-family: 'Savoye LET';
     font-size: 35px;
     color: #744C27;
-    font-weight: bold;
+
   }
 
   .btn_blanco{
     background: #fff;
-    color: #C5A88C;
+    color: #b17f4a;
     border-radius: 50px;
     padding: clamp(8px, 2vw, 10px) clamp(28px, 6vw, 90px);
     font-size: clamp(16px, 3.2vw, 30px);
@@ -290,7 +290,7 @@
             <div class="col-6 col-md-6 col-lg-6">
                 <a href="https://maps.app.goo.gl/tfqkW9LWxgJurz627?g_st=aw" target="_blank" rel="noopener noreferrer" style="text-decoration: none">
                     <div class="card_hospedaje p-3">
-                        <h5 class="text-center mb-2">Hotel San Agusti</h5>
+                        <h5 class="text-center mb-2">Hotel San Agustin</h5>
                         <h6 class="mb-2">Tiempo aproximado : 15 minutos</h6>
                         <p class="mb-0">
                             Niños Heroes 43, San Carlos, 62737 Yautepec de Zaragoza, Mor.
