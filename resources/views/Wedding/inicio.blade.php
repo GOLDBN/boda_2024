@@ -75,7 +75,7 @@
     font-family: 'DancingScript-VariableFont_wght';
     font-size: 50px;
     color: #744C27;
-
+    margin-top: 5rem!important;
   }
 
   .btn_blanco{
