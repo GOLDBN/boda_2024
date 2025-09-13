@@ -79,6 +79,7 @@
   }
 
   .btn_blanco{
+    font-family: 'CaviarDreams_Bold';
     background: #fff;
     color: #b17f4a;
     border-radius: 50px;
