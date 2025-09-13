@@ -56,6 +56,7 @@
     width: 20%;
   }
 
+
   .titulo_prinicpal{
     font-family: 'AdoraBouton_Regular';
     font-size: clamp(40px, 10vw, 90px);
@@ -287,11 +288,10 @@
             <div class="col-6 col-md-6 col-lg-6">
                 <a href="https://maps.app.goo.gl/tfqkW9LWxgJurz627?g_st=aw" target="_blank" rel="noopener noreferrer" style="text-decoration: none">
                     <div class="card_hospedaje p-3">
-                        <h5 class="text-center mb-2">OTRA OPCIÓN</h5>
-                        <h6 class="mb-2">Tiempo aproximado : 20 minutos</h6>
+                        <h5 class="text-center mb-2">Hotel San Agusti</h5>
+                        <h6 class="mb-2">Tiempo aproximado : 15 minutos</h6>
                         <p class="mb-0">
-                        Dirección / referencia de hospedaje adicional
-                        cerca del lugar del evento.
+                            Niños Heroes 43, San Carlos, 62737 Yautepec de Zaragoza, Mor.
                         </p>
                     </div>
                 </a>
