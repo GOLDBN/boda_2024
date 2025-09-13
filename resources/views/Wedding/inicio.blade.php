@@ -17,13 +17,15 @@
     font-family: CaviarDreams_Bold;
     src: url('{{ asset('assets/img/CaviarDreams_Bold.ttf') }}');
   }
+
   @font-face {
     font-family: AdoraBouton_Regular;
     src: url('{{ asset('assets/img/AdoraBouton_Regular.ttf') }}');
   }
+
   @font-face {
-    font-family: Savoye_LET_Plain;
-    src: url('{{ asset('assets/img/Savoye_LET_Plain.ttf') }}');
+    font-family: Savoye;
+    src: url('{{ asset('assets/img/Savoye.ttf') }}');
   }
 
   html, body { min-height: 100%; }
@@ -70,8 +72,8 @@
     text-decoration: none;
   }
   .titulos_h3{
-    font-family: 'CaviarDreams_Bold';
-    font-size: clamp(18px, 3vw, 25px);
+    font-family: 'Savoye';
+    font-size: 35px;
     color: #744C27;
     font-weight: bold;
   }
@@ -97,7 +99,7 @@
   .img_lugar,
   .img_portada{
     width: min(90%, 900px);
-    opacity: 0.6;
+    opacity: 0.9;
   }
 
   /* Contador */
@@ -212,7 +214,7 @@
         <div class="col-12">
           <h1 class="text-center titulos_h3 mt-5">Orden del día</h1>
           <p class="text-center">
-            <img src="{{ asset('assets/img/orden.png') }}" alt="decoración" class="img_lugar">
+            <img src="{{ asset('assets/img/orden.png') }}" alt="decoración" class="img_lugar" style="opacity: 1!important">
           </p>
         </div>
       </div>
