@@ -24,8 +24,8 @@
   }
 
   @font-face {
-    font-family: Savoye LET;
-    src: url('{{ asset('assets/img/Savoye LET.ttf') }}');
+    font-family: DancingScript-VariableFont_wght;
+    src: url('{{ asset('assets/img/DancingScript-VariableFont_wght.ttf') }}');
   }
 
   html, body { min-height: 100%; }
@@ -72,8 +72,8 @@
     text-decoration: none;
   }
   .titulos_h3{
-    font-family: 'Savoye LET';
-    font-size: 35px;
+    font-family: 'DancingScript-VariableFont_wght';
+    font-size: 50px;
     color: #744C27;
 
   }
