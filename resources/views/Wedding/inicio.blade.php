@@ -52,6 +52,10 @@
     width: 30%;
   }
 
+ .img_acu2{
+    width: 20%;
+  }
+
   .titulo_prinicpal{
     font-family: 'AdoraBouton_Regular';
     font-size: clamp(40px, 10vw, 90px);
@@ -178,7 +182,7 @@
     <section class="container-lg px-2 px-md-3 px-lg-4 py-0 py-md-3 py-lg-3 position-relative">
       <div class="row">
         <div class="col-12">
-          <h1 class="text-center titulos_h3 mt-3">Lugar</h1>
+          <h1 class="text-center titulos_h3 mt-5">Lugar</h1>
         </div>
 
         <div class="col-12">
@@ -186,7 +190,7 @@
             <img class="img_lugar" src="{{ asset('assets/img/Recurso3.png') }}" alt="mapa">
           </p>
           <p class="text-center">
-            <a href="https://maps.app.goo.gl/jKh63CfKjdhYq8T28?g_st=aw" target="_blank" class="titulos_h2">
+            <a href="https://maps.app.goo.gl/AMTQoSQyLKuYYwaN6?g_st=aw" target="_blank" class="titulos_h2">
               Ex hacienda de Apanquetzalco. C. Apanquetzalco, Vicente Estrada Cajigal, <br>
               62732 Yautepec de Zaragoza, Mor.
             </a>
@@ -195,7 +199,7 @@
 
         <div class="col-12">
           <p class="text-center mt-4">
-            <a class="btn_blanco" href="https://maps.app.goo.gl/jKh63CfKjdhYq8T28?g_st=aw" target="_blank" rel="noopener noreferrer">Ubicación</a>
+            <a class="btn_blanco" href="https://maps.app.goo.gl/AMTQoSQyLKuYYwaN6?g_st=aw" target="_blank" rel="noopener noreferrer">Ubicación</a>
           </p>
         </div>
       </div>
@@ -205,7 +209,7 @@
     <section class="container-lg px-2 px-md-3 px-lg-4 py-0 py-md-3 py-lg-3 position-relative">
       <div class="row">
         <div class="col-12">
-          <h1 class="text-center titulos_h3 mt-3">Orden del día</h1>
+          <h1 class="text-center titulos_h3 mt-5">Orden del día</h1>
           <p class="text-center">
             <img src="{{ asset('assets/img/orden.png') }}" alt="decoración" class="img_lugar">
           </p>
@@ -216,7 +220,7 @@
     <section class="container-lg px-2 px-md-3 px-lg-4 py-0 py-md-3 py-lg-3 position-relative">
       <div class="row">
         <div class="col-12">
-          <h1 class="text-center titulos_h3 mt-3">Código de vestimenta</h1>
+          <h1 class="text-center titulos_h3 mt-5">Código de vestimenta</h1>
         </div>
 
         <div class="col-12">
@@ -246,45 +250,51 @@
           <h1 class="text-center titulos_h3">Recomendaciones de hospedaje</h1>
         </div>
 
-        <div class="col-12 mt-3">
+        <div class="col-12 mt-5">
           <div class="row g-4">
 
             <div class="col-6 col-md-6 col-lg-6">
-              <div class="card_hospedaje p-3">
-                <h5 class="text-center mb-2">HOTEL AQUETZALLI</h5>
-                <h6 class="mb-2">Tiempo aproximado : 15 minutos</h6>
-                <p class="mb-0">
-                  Hotel Aquetzalli Cocoyoc, Carretera Federal
-                  Cuautla Cuernavaca Km 34.25 Municipio
-                  Yautepec de Zaragoza Cocoyoc, 62736
-                  Yautepec de Zaragoza, Mor.
-                </p>
-              </div>
+                <a href="https://maps.app.goo.gl/jKh63CfKjdhYq8T28?g_st=aw" target="_blank" rel="noopener noreferrer" style="text-decoration: none">
+                    <div class="card_hospedaje p-3">
+                        <h5 class="text-center mb-2">HOTEL AQUETZALLI</h5>
+                        <h6 class="mb-2">Tiempo aproximado : 15 minutos</h6>
+                        <p class="mb-0">
+                        Hotel Aquetzalli Cocoyoc, Carretera Federal
+                        Cuautla Cuernavaca Km 34.25 Municipio
+                        Yautepec de Zaragoza Cocoyoc, 62736
+                        Yautepec de Zaragoza, Mor.
+                        </p>
+                    </div>
+                </a>
             </div>
 
             <div class="col-6 col-md-6 col-lg-6">
-              <div class="card_hospedaje p-3">
-                <h5 class="text-center mb-2">RANCHO MACLOY</h5>
-                <h6 class="mb-2">Tiempo aproximado : 23 minutos</h6>
-                <p class="mb-0">
-                  Rancho Macloy, Carr. Federal Cuernavaca -
-                  Cuautla KM 31.5, San Carlos, 62737 Yautepec,
-                  Mor.
-                </p>
-              </div>
+                <a href="https://maps.app.goo.gl/1HSonAsMnC4v3sSc9?g_st=aw" target="_blank" rel="noopener noreferrer" style="text-decoration: none">
+                    <div class="card_hospedaje p-3">
+                        <h5 class="text-center mb-2">RANCHO MACLOY</h5>
+                        <h6 class="mb-2">Tiempo aproximado : 23 minutos</h6>
+                        <p class="mb-0">
+                        Rancho Macloy, Carr. Federal Cuernavaca -
+                        Cuautla KM 31.5, San Carlos, 62737 Yautepec,
+                        Mor.
+                        </p>
+                    </div>
+                </a>
             </div>
 
             <div class="col-3"></div>
 
             <div class="col-6 col-md-6 col-lg-6">
-              <div class="card_hospedaje p-3">
-                <h5 class="text-center mb-2">OTRA OPCIÓN</h5>
-                <h6 class="mb-2">Tiempo aproximado : 20 minutos</h6>
-                <p class="mb-0">
-                  Dirección / referencia de hospedaje adicional
-                  cerca del lugar del evento.
-                </p>
-              </div>
+                <a href="https://maps.app.goo.gl/tfqkW9LWxgJurz627?g_st=aw" target="_blank" rel="noopener noreferrer" style="text-decoration: none">
+                    <div class="card_hospedaje p-3">
+                        <h5 class="text-center mb-2">OTRA OPCIÓN</h5>
+                        <h6 class="mb-2">Tiempo aproximado : 20 minutos</h6>
+                        <p class="mb-0">
+                        Dirección / referencia de hospedaje adicional
+                        cerca del lugar del evento.
+                        </p>
+                    </div>
+                </a>
             </div>
 
             <div class="col-3"></div>
@@ -300,10 +310,10 @@
     <section class="container-lg px-2 px-md-3 px-lg-4 py-0 py-md-3 py-lg-3 position-relative">
       <div class="row">
         <div class="col-12">
-          <h1 class="text-center titulos_h3 mt-3">Presentes</h1>
+          <h1 class="text-center titulos_h3 mt-5">Presentes</h1>
 
           <p class="text-center">
-            <img src="{{ asset('assets/img/acu_9.png') }}" alt="decoración" class="img_acu">
+            <img src="{{ asset('assets/img/acu_9.png') }}" alt="decoración" class="img_acu2">
           </p>
 
           <p class="text-center titulos_h2">
@@ -313,7 +323,7 @@
           </p>
 
           <p class="text-center p-3">
-            <a class="btn_blanco" href="https://www.amazon.com.mx/wedding/registry/3IBEO4EY4ETYCm" target="_blank" rel="noopener noreferrer">AMAZON</a>
+            <a class="btn_blanco" href="https://www.amazon.com.mx/wedding/registry/3IBEO4EY4ETYC" target="_blank" rel="noopener noreferrer">AMAZON</a>
           </p>
           <p class="text-center p-3">
             <a class="btn_blanco" href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51752229" target="_blank" rel="noopener noreferrer">LIVERPOOL</a>
@@ -336,7 +346,7 @@
           <h1 class="text-center titulos_h3">Dots Memories</h1>
 
           <p class="text-center">
-            <img src="{{ asset('assets/img/acu_10.png') }}" alt="decoración" class="img_acu">
+            <img src="{{ asset('assets/img/acu_10.png') }}" alt="decoración" class="img_acu2">
           </p>
 
           <p class="text-center titulos_h2">
@@ -373,7 +383,7 @@
                             <div class="row g-3">
                                 <div class="col-12">
                                     <label for="inputAddress" class="form-label titulos_h2">Nombre completo</label>
-                                    <input type="text" class="form-control" name="nombre" id="nombre" required>
+                                    <input type="text" class="form-control" name="nombre" id="nombre" value="{{ $client->nombre }}"  required>
                                 </div>
 
                                 <div class="col-md-6" style="margin-top:2rem;">
