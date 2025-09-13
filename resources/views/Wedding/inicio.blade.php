@@ -361,7 +361,7 @@
           </p>
 
           <p class="text-center titulos_h2">
-            Es necesario descargar e instalar la aplicación en tu dispositivo móvil para subir fotos y videos
+            Por favor descarga e instalar la aplicación en tu dispositivo móvil para subir fotos y videos
           </p>
 
         </div>
