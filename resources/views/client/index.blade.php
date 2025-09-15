@@ -166,14 +166,25 @@ $(function () {
     });
   });
 
-  function getDefaultMessage(nombre, link, fechaBoda = '22 de Noviembre de 2025', fechaLimite = '22 de Octubre') {
+    function getDefaultMessage(
+    nombre,
+    link,
+    fechaBoda = '22 de noviembre',
+    fechaLimite = '22 de octubre'
+    ) {
     const n = nombre ? ` ${nombre}` : '';
-    const l = link ? link : '';
-    return `¡Hola${n}! 😄 Estamos emocionados de informarles que celebraremos nuestro matrimonio el ${fechaBoda}. ` +
-           `Si aún no han confirmado su asistencia, no se preocupen; pueden hacerlo mediante este link con el nombre al inicio, ` +
-           `tienen hasta el ${fechaLimite}. ¡Les deseamos un maravilloso año y esperamos contar con su presencia en este día tan especial! ` +
-           `🎉 ¡Saludos! 👨‍❤️‍👨\n👉 ${l}`;
-  }
+    const l = link ? `\n${link}` : '';
+    return (
+        `¡Hola${n}!\n` +
+        `¡Se acerca el gran día!\n` +
+        `Con mucha ilusión queremos invitarlos a nuestra boda el ${fechaBoda} 💍\n` +
+        `Será un momento súper especial y nos encantaría que nos acompañen.\n` +
+        `Por favor confirmen su asistencia antes del ${fechaLimite}.\n` +
+        `Aquí tienen la invitación digital con todos los detalles,\n` +
+        `🎉 ¡Saludos! 👨‍❤️‍👨` +
+        l
+    );
+    }
 
   function buildWaNumber(){
     const raw = ($phone.val() || '').trim();
